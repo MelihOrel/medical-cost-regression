@@ -1,0 +1,5 @@
+variable,test,statistic,p_value,effect_size,effect_measure
+smoker,Mann-Whitney U,7403.0,0.0,0.9492,rank-biserial r
+sex,Mann-Whitney U,220652.0,0.6945,0.0124,rank-biserial r
+region,Kruskal-Wallis H,4.6225,0.2016,0.0012,epsilon-squared
+children,Kruskal-Wallis H,29.1207,0.0,0.0181,epsilon-squared

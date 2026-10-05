@@ -1,0 +1,26 @@
+fold,model,r2_dollars,rmse,mae
+1,"M0  Baseline (all variables, linear)",0.8069,5956.3429,4177.0456
+1,M1  + age squared (centred),0.8026,6022.9317,4223.4577
+1,M2  + obesity flag (BMI >= 30),0.8023,6027.2163,4323.204
+1,M3  + obese x smoker interaction,0.9059,4158.2992,2393.8906
+1,"M3-log  same terms, log(charges)",0.507,9517.6377,5151.7004
+2,"M0  Baseline (all variables, linear)",0.7143,6447.9872,4181.9917
+2,M1  + age squared (centred),0.7212,6369.8983,4068.9585
+2,M2  + obesity flag (BMI >= 30),0.7243,6333.8042,4224.5266
+2,M3  + obese x smoker interaction,0.8184,5140.5435,2648.4869
+2,"M3-log  same terms, log(charges)",0.479,8707.0917,4673.1678
+3,"M0  Baseline (all variables, linear)",0.7515,5921.8701,4166.7666
+3,M1  + age squared (centred),0.755,5880.235,4067.7791
+3,M2  + obesity flag (BMI >= 30),0.7635,5777.4879,4104.9665
+3,M3  + obese x smoker interaction,0.8557,4512.7446,2408.4949
+3,"M3-log  same terms, log(charges)",-0.2605,13337.5647,6104.1031
+4,"M0  Baseline (all variables, linear)",0.6738,6218.2615,4467.1941
+4,M1  + age squared (centred),0.6798,6161.0773,4433.49
+4,M2  + obesity flag (BMI >= 30),0.6919,6043.7117,4439.2832
+4,M3  + obese x smoker interaction,0.8609,4061.015,2207.9372
+4,"M3-log  same terms, log(charges)",0.4193,8297.3703,4652.3744
+5,"M0  Baseline (all variables, linear)",0.7486,5981.5108,4056.5519
+5,M1  + age squared (centred),0.7476,5992.5618,4077.2162
+5,M2  + obesity flag (BMI >= 30),0.7497,5968.3109,4178.5708
+5,M3  + obese x smoker interaction,0.8651,4381.2569,2472.3319
+5,"M3-log  same terms, log(charges)",0.2681,10205.1472,4787.1651

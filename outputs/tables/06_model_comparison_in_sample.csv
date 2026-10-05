@@ -1,0 +1,6 @@
+model,scale,n_params,r2_own_scale,adj_r2_own_scale,aic_own_scale,r2_dollars,rmse,mae
+"M0  Baseline (all variables, linear)",linear,9,0.7507,0.7492,27094.2154,0.7507,6043.8499,4173.4896
+M1  + age squared (centred),linear,10,0.7536,0.7519,27081.0296,0.7536,6009.6237,4123.5367
+M2  + obesity flag (BMI >= 30),linear,11,0.7581,0.7563,27058.1016,0.7581,5953.86,4207.1367
+M3  + obese x smoker interaction,linear,12,0.8663,0.8652,26267.3596,0.8663,4426.3566,2405.7483
+"M3-log  same terms, log(charges)",log,12,0.7899,0.7882,1504.3606,0.34,9834.9638,4998.3311

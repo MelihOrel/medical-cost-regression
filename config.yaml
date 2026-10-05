@@ -1,0 +1,72 @@
+# Medical Cost Regression: pipeline configuration
+# Every path, threshold and model spec lives here. Change a formula here, rerun main.py.
+
+seed: 42
+
+data:
+  raw_path: data/raw/insurance.csv
+  source_url: https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/insurance.csv
+  target: charges
+  numeric: [age, bmi, children]
+  categorical: [sex, smoker, region]
+  drop_duplicates: true
+  obesity_threshold: 30.0   # WHO cut-off for obesity (BMI >= 30)
+  # Age is centred before squaring (age_c = age - mean age). Same fit, but it removes the
+  # structural collinearity between age and age^2 and makes the linear term readable as
+  # the age slope at the average age.
+  center_age: true
+
+outputs:
+  figures_dir: outputs/figures
+  tables_dir: outputs/tables
+  dpi: 300
+
+eda:
+  # Chi-square tests of independence between categorical variables
+  chi_square_pairs:
+    - [smoker, sex]
+    - [smoker, region]
+    - [sex, region]
+
+# Model ladder: each step adds one idea that the EDA figures motivated.
+# `scale: log` models are fit on log(charges) and back-transformed with Duan's smearing
+# estimator, so every model is compared on the same dollar scale.
+models:
+  M0_baseline:
+    formula: "charges ~ age + sex + bmi + children + smoker + region"
+    scale: linear
+    label: "M0  Baseline (all variables, linear)"
+  M1_age_sq:
+    formula: "charges ~ age_c + I(age_c**2) + sex + bmi + children + smoker + region"
+    scale: linear
+    label: "M1  + age squared (centred)"
+  M2_obese:
+    formula: "charges ~ age_c + I(age_c**2) + sex + bmi + children + smoker + region + obese"
+    scale: linear
+    label: "M2  + obesity flag (BMI >= 30)"
+  M3_interaction:
+    formula: "charges ~ age_c + I(age_c**2) + sex + bmi + children + smoker + region + obese + obese:smoker"
+    scale: linear
+    label: "M3  + obese x smoker interaction"
+  M3_log:
+    formula: "np.log(charges) ~ age_c + I(age_c**2) + sex + bmi + children + smoker + region + obese + obese:smoker"
+    scale: log
+    label: "M3-log  same terms, log(charges)"
+
+final_model: M3_interaction
+
+cv:
+  n_splits: 5
+  shuffle: true
+
+inference:
+  robust_cov: HC3
+  bootstrap_reps: 2000
+  alpha: 0.05
+
+diagnostics:
+  cooks_threshold_factor: 4      # flag points with Cook's D > 4/n
+  high_residual_usd: 5000        # residuals above this are tracked as "unexplained high-cost" cases
+
+shap:
+  background_size: 200

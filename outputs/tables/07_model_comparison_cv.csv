@@ -1,0 +1,6 @@
+model,cv_r2_dollars_mean,cv_r2_dollars_std,cv_rmse_mean,cv_rmse_std,cv_mae_mean,cv_mae_std
+"M0  Baseline (all variables, linear)",0.739,0.0493,6105.1945,224.362,4209.91,152.8354
+M1  + age squared (centred),0.7412,0.0452,6085.3408,187.9363,4174.1803,159.2676
+M2  + obesity flag (BMI >= 30),0.7463,0.0415,6030.1062,200.0379,4254.1102,130.2768
+M3  + obese x smoker interaction,0.8612,0.0311,4450.7718,424.826,2426.2283,158.5368
+"M3-log  same terms, log(charges)",0.2826,0.3173,10012.9623,1998.9883,5073.7021,609.889

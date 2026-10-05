@@ -1,0 +1,12 @@
+term,vif
+sex[T.male],1.011
+smoker[T.yes],2.134
+region[T.northwest],1.518
+region[T.southeast],1.658
+region[T.southwest],1.53
+age_c,1.023
+I(age_c ** 2),1.107
+bmi,2.957
+children,1.102
+obese,3.021
+obese:smoker[T.yes],2.393

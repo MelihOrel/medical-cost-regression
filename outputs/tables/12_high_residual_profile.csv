@@ -1,0 +1,5 @@
+smoker,high_resid,n,mean_charges,mean_age,mean_bmi,mean_resid
+no,False,968,7071.69,39.41,30.62,-1349.74
+no,True,95,22389.78,39.35,31.0,13753.15
+yes,False,257,31136.09,38.55,30.57,-867.49
+yes,True,17,45869.89,38.0,32.76,13114.39

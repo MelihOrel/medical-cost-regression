@@ -1,0 +1,11 @@
+variable,level,n,share
+sex,female,662,0.4951
+sex,male,675,0.5049
+smoker,no,1063,0.7951
+smoker,yes,274,0.2049
+region,northeast,324,0.2423
+region,northwest,324,0.2423
+region,southeast,364,0.2723
+region,southwest,325,0.2431
+obese,0,631,0.472
+obese,1,706,0.528

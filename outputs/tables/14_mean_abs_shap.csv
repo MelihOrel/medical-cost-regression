@@ -1,0 +1,12 @@
+term,mean_abs_shap_usd
+smoker = yes,4250.08
+obese x smoker,3389.26
+age (centred),3183.27
+children,647.64
+bmi,590.59
+age squared (centred),561.41
+obese,494.81
+region = southwest,413.42
+region = southeast,342.58
+sex = male,247.42
+region = northwest,101.65

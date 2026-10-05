@@ -1,0 +1,4 @@
+pair,chi2,dof,p_value,cramers_v,min_expected
+smoker x sex,7.8441,1,0.0051,0.0766,135.6679
+smoker x region,7.2779,3,0.0635,0.0738,66.3994
+sex x region,0.4769,3,0.9239,0.0189,160.4248

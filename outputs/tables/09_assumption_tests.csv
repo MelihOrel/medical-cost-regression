@@ -1,0 +1,7 @@
+assumption,test,statistic,p_value,skew_resid
+Normality,Jarque-Bera,7702.1065,0.0,3.1687
+Normality,Shapiro-Wilk,0.4822,0.0,
+Homoscedasticity,Breusch-Pagan,4.5098,0.9526,
+Homoscedasticity,White (special form),0.3914,0.8223,
+Functional form,Ramsey RESET (power 2),0.1458,0.7027,
+Independence,Durbin-Watson,2.0645,,

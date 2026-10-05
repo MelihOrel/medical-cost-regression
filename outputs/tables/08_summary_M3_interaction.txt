@@ -1,0 +1,37 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                charges   R-squared:                       0.866
+Model:                            OLS   Adj. R-squared:                  0.865
+Method:                 Least Squares   F-statistic:                     780.5
+Date:                Mon, 05 Oct 2026   Prob (F-statistic):               0.00
+Time:                        14:37:37   Log-Likelihood:                -13122.
+No. Observations:                1337   AIC:                         2.627e+04
+Df Residuals:                    1325   BIC:                         2.633e+04
+Df Model:                          11                                         
+Covariance Type:            nonrobust                                         
+=======================================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+Intercept            4595.9240    937.809      4.901      0.000    2756.171    6435.677
+sex[T.male]          -495.1238    244.545     -2.025      0.043    -974.862     -15.385
+smoker[T.yes]         1.34e+04    440.105     30.458      0.000    1.25e+04    1.43e+04
+region[T.northwest]  -275.7826    349.661     -0.789      0.430    -961.733     410.168
+region[T.southeast]  -828.5668    351.759     -2.355      0.019   -1518.633    -138.501
+region[T.southwest] -1222.6260    350.652     -3.487      0.001   -1910.520    -534.732
+age_c                 259.9451      8.760     29.673      0.000     242.759     277.131
+I(age_c ** 2)           3.7367      0.747      5.003      0.000       2.272       5.202
+bmi                   119.8053     34.289      3.494      0.000      52.539     187.071
+children              678.1403    105.934      6.402      0.000     470.324     885.956
+obese                -995.7662    423.345     -2.352      0.019   -1826.266    -165.266
+obese:smoker[T.yes]  1.981e+04    604.924     32.746      0.000    1.86e+04     2.1e+04
+==============================================================================
+Omnibus:                      889.864   Durbin-Watson:                   2.065
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             7702.106
+Skew:                           3.169   Prob(JB):                         0.00
+Kurtosis:                      12.904   Cond. No.                     2.12e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.12e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

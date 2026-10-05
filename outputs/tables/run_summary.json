@@ -1,0 +1,219 @@
+{
+  "n_raw": 1338,
+  "n_duplicates_dropped": 1,
+  "n_analysis": 1337,
+  "age_mean_used_for_centering": 39.2221,
+  "final_model": "M3_interaction",
+  "final_r2": 0.8663,
+  "final_adj_r2": 0.8652,
+  "cv": [
+    {
+      "model": "M0  Baseline (all variables, linear)",
+      "cv_r2_dollars_mean": 0.739,
+      "cv_r2_dollars_std": 0.0493,
+      "cv_rmse_mean": 6105.1945,
+      "cv_rmse_std": 224.362,
+      "cv_mae_mean": 4209.91,
+      "cv_mae_std": 152.8354
+    },
+    {
+      "model": "M1  + age squared (centred)",
+      "cv_r2_dollars_mean": 0.7412,
+      "cv_r2_dollars_std": 0.0452,
+      "cv_rmse_mean": 6085.3408,
+      "cv_rmse_std": 187.9363,
+      "cv_mae_mean": 4174.1803,
+      "cv_mae_std": 159.2676
+    },
+    {
+      "model": "M2  + obesity flag (BMI >= 30)",
+      "cv_r2_dollars_mean": 0.7463,
+      "cv_r2_dollars_std": 0.0415,
+      "cv_rmse_mean": 6030.1062,
+      "cv_rmse_std": 200.0379,
+      "cv_mae_mean": 4254.1102,
+      "cv_mae_std": 130.2768
+    },
+    {
+      "model": "M3  + obese x smoker interaction",
+      "cv_r2_dollars_mean": 0.8612,
+      "cv_r2_dollars_std": 0.0311,
+      "cv_rmse_mean": 4450.7718,
+      "cv_rmse_std": 424.826,
+      "cv_mae_mean": 2426.2283,
+      "cv_mae_std": 158.5368
+    },
+    {
+      "model": "M3-log  same terms, log(charges)",
+      "cv_r2_dollars_mean": 0.2826,
+      "cv_r2_dollars_std": 0.3173,
+      "cv_rmse_mean": 10012.9623,
+      "cv_rmse_std": 1998.9883,
+      "cv_mae_mean": 5073.7021,
+      "cv_mae_std": 609.889
+    }
+  ],
+  "in_sample": [
+    {
+      "model": "M0  Baseline (all variables, linear)",
+      "scale": "linear",
+      "n_params": 9,
+      "r2_own_scale": 0.7507,
+      "adj_r2_own_scale": 0.7492,
+      "aic_own_scale": 27094.2154,
+      "r2_dollars": 0.7507,
+      "rmse": 6043.8499,
+      "mae": 4173.4896
+    },
+    {
+      "model": "M1  + age squared (centred)",
+      "scale": "linear",
+      "n_params": 10,
+      "r2_own_scale": 0.7536,
+      "adj_r2_own_scale": 0.7519,
+      "aic_own_scale": 27081.0296,
+      "r2_dollars": 0.7536,
+      "rmse": 6009.6237,
+      "mae": 4123.5367
+    },
+    {
+      "model": "M2  + obesity flag (BMI >= 30)",
+      "scale": "linear",
+      "n_params": 11,
+      "r2_own_scale": 0.7581,
+      "adj_r2_own_scale": 0.7563,
+      "aic_own_scale": 27058.1016,
+      "r2_dollars": 0.7581,
+      "rmse": 5953.86,
+      "mae": 4207.1367
+    },
+    {
+      "model": "M3  + obese x smoker interaction",
+      "scale": "linear",
+      "n_params": 12,
+      "r2_own_scale": 0.8663,
+      "adj_r2_own_scale": 0.8652,
+      "aic_own_scale": 26267.3596,
+      "r2_dollars": 0.8663,
+      "rmse": 4426.3566,
+      "mae": 2405.7483
+    },
+    {
+      "model": "M3-log  same terms, log(charges)",
+      "scale": "log",
+      "n_params": 12,
+      "r2_own_scale": 0.7899,
+      "adj_r2_own_scale": 0.7882,
+      "aic_own_scale": 1504.3606,
+      "r2_dollars": 0.34,
+      "rmse": 9834.9638,
+      "mae": 4998.3311
+    }
+  ],
+  "assumption_tests": [
+    {
+      "assumption": "Normality",
+      "test": "Jarque-Bera",
+      "statistic": 7702.1065,
+      "p_value": 0.0,
+      "skew_resid": 3.1687
+    },
+    {
+      "assumption": "Normality",
+      "test": "Shapiro-Wilk",
+      "statistic": 0.4822,
+      "p_value": 0.0,
+      "skew_resid": NaN
+    },
+    {
+      "assumption": "Homoscedasticity",
+      "test": "Breusch-Pagan",
+      "statistic": 4.5098,
+      "p_value": 0.9526,
+      "skew_resid": NaN
+    },
+    {
+      "assumption": "Homoscedasticity",
+      "test": "White (special form)",
+      "statistic": 0.3914,
+      "p_value": 0.8223,
+      "skew_resid": NaN
+    },
+    {
+      "assumption": "Functional form",
+      "test": "Ramsey RESET (power 2)",
+      "statistic": 0.1458,
+      "p_value": 0.7027,
+      "skew_resid": NaN
+    },
+    {
+      "assumption": "Independence",
+      "test": "Durbin-Watson",
+      "statistic": 2.0645,
+      "p_value": NaN,
+      "skew_resid": NaN
+    }
+  ],
+  "n_influential": 90,
+  "cooks_threshold": 0.00299,
+  "chi_square": [
+    {
+      "pair": "smoker x sex",
+      "chi2": 7.8441,
+      "dof": 1,
+      "p_value": 0.0051,
+      "cramers_v": 0.0766,
+      "min_expected": 135.6679
+    },
+    {
+      "pair": "smoker x region",
+      "chi2": 7.2779,
+      "dof": 3,
+      "p_value": 0.0635,
+      "cramers_v": 0.0738,
+      "min_expected": 66.3994
+    },
+    {
+      "pair": "sex x region",
+      "chi2": 0.4769,
+      "dof": 3,
+      "p_value": 0.9239,
+      "cramers_v": 0.0189,
+      "min_expected": 160.4248
+    }
+  ],
+  "group_tests": [
+    {
+      "variable": "smoker",
+      "test": "Mann-Whitney U",
+      "statistic": 7403.0,
+      "p_value": 0.0,
+      "effect_size": 0.9492,
+      "effect_measure": "rank-biserial r"
+    },
+    {
+      "variable": "sex",
+      "test": "Mann-Whitney U",
+      "statistic": 220652.0,
+      "p_value": 0.6945,
+      "effect_size": 0.0124,
+      "effect_measure": "rank-biserial r"
+    },
+    {
+      "variable": "region",
+      "test": "Kruskal-Wallis H",
+      "statistic": 4.6225,
+      "p_value": 0.2016,
+      "effect_size": 0.0012,
+      "effect_measure": "epsilon-squared"
+    },
+    {
+      "variable": "children",
+      "test": "Kruskal-Wallis H",
+      "statistic": 29.1207,
+      "p_value": 0.0,
+      "effect_size": 0.0181,
+      "effect_measure": "epsilon-squared"
+    }
+  ]
+}

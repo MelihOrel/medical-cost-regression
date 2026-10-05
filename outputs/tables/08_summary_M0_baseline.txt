@@ -1,0 +1,32 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                charges   R-squared:                       0.751
+Model:                            OLS   Adj. R-squared:                  0.749
+Method:                 Least Squares   F-statistic:                     500.0
+Date:                Mon, 05 Oct 2026   Prob (F-statistic):               0.00
+Time:                        14:37:37   Log-Likelihood:                -13538.
+No. Observations:                1337   AIC:                         2.709e+04
+Df Residuals:                    1328   BIC:                         2.714e+04
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+=======================================================================================
+                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------
+Intercept           -1.194e+04    988.227    -12.079      0.000   -1.39e+04   -9997.900
+sex[T.male]          -129.4815    333.195     -0.389      0.698    -783.128     524.165
+smoker[T.yes]        2.385e+04    413.348     57.693      0.000     2.3e+04    2.47e+04
+region[T.northwest]  -349.2265    476.824     -0.732      0.464   -1284.637     586.183
+region[T.southeast] -1035.2656    478.867     -2.162      0.031   -1974.684     -95.847
+region[T.southwest]  -960.0814    478.106     -2.008      0.045   -1898.007     -22.156
+age                   256.7646     11.912     21.555      0.000     233.396     280.133
+bmi                   339.2504     28.611     11.857      0.000     283.122     395.379
+children              474.8205    137.897      3.443      0.001     204.301     745.340
+==============================================================================
+Omnibus:                      299.816   Durbin-Watson:                   2.089
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              716.552
+Skew:                           1.211   Prob(JB):                    2.53e-156
+Kurtosis:                       5.646   Cond. No.                         311.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
